@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { Button, Layout, Space } from 'antd';
 import styled from 'styled-components';
-import LogoBar from '@/components/LogoBar';
 import { Path } from '@/utils/enum';
 import Deploy from '@/components/deploy/Deploy';
 
@@ -44,7 +43,7 @@ export default function HeaderBar() {
         style={{ marginTop: -2 }}
       >
         <Space size={[48, 0]}>
-          <LogoBar />
+{/*           <LogoBar /> */}
           {showNav && (
             <Space size={[16, 0]}>
               <StyledButton
@@ -55,7 +54,7 @@ export default function HeaderBar() {
               >
                 Home
               </StyledButton>
-              <StyledButton
+{/*               <StyledButton
                 shape="round"
                 size="small"
                 $isHighlight={pathname.startsWith(Path.Modeling)}
@@ -78,7 +77,7 @@ export default function HeaderBar() {
                 onClick={() => router.push(Path.APIManagementHistory)}
               >
                 API
-              </StyledButton>
+              </StyledButton> */}
             </Space>
           )}
         </Space>
