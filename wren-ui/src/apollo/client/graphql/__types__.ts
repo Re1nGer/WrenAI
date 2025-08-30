@@ -1114,7 +1114,7 @@ export type PreviewViewDataInput = {
 };
 
 export enum ProjectLanguage {
-  AR = 'AR',
+/*   AR = 'AR',
   DE = 'DE',
   EN = 'EN',
   ES = 'ES',
@@ -1125,9 +1125,9 @@ export enum ProjectLanguage {
   KO = 'KO',
   NL = 'NL',
   PT = 'PT',
-  RU = 'RU',
   ZH_CN = 'ZH_CN',
-  ZH_TW = 'ZH_TW'
+  ZH_TW = 'ZH_TW', */
+  RU = 'RU',
 }
 
 export type Query = {

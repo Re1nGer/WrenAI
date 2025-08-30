@@ -8,16 +8,6 @@ networks:
     driver: bridge
 
 services:
-  bootstrap:
-    image: ghcr.io/canner/wren-bootstrap:${WREN_BOOTSTRAP_VERSION}
-    restart: on-failure
-    platform: ${PLATFORM}
-    environment:
-      DATA_PATH: /app/data
-    volumes:
-      - data:/app/data
-    command: /bin/sh /app/init.sh
-
   wren-engine:
     image: ghcr.io/canner/wren-engine:${WREN_ENGINE_VERSION}
     restart: on-failure
@@ -30,8 +20,6 @@ services:
       - ${PROJECT_DIR}/data:/usr/src/app/data
     networks:
       - wren
-    depends_on:
-      - bootstrap
 
   ibis-server:
     image: ghcr.io/canner/wren-engine-ibis:${IBIS_SERVER_VERSION}
@@ -47,7 +35,9 @@ services:
       - wren
 
   wren-ai-service:
-    image: ghcr.io/canner/wren-ai-service:${WREN_AI_SERVICE_VERSION}
+    #image: ghcr.io/canner/wren-ai-service:${WREN_AI_SERVICE_VERSION}
+    build: 
+      context: '../wren-ai-service'
     restart: on-failure
     platform: ${PLATFORM}
     expose:
@@ -81,7 +71,10 @@ services:
       - wren
 
   wren-ui:
-    image: ghcr.io/canner/wren-ui:${WREN_UI_VERSION}
+    #image: ghcr.io/canner/wren-ui:${WREN_UI_VERSION}
+    #image: wren-ui
+    build: 
+      context: '../wren-ui'
     restart: on-failure
     platform: ${PLATFORM}
     environment:
