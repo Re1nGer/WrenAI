@@ -26,7 +26,7 @@ const Wrapper = ({ children }) => {
       style={{ height: '100%' }}
     >
       <div className="text-md text-medium gray-8 mt-3">
-        Know more about your data
+        Узнайте больше о своих данных.
       </div>
       {children}
     </div>
@@ -71,14 +71,14 @@ function RecommendedQuestionsInstruction(props) {
       <Button className="mt-6" {...buttonProps} />
       {generating && (
         <Text className="mt-3 text-sm gray-6">
-          Thinking of good questions for you... (about 1 minute)
+          Думаю над хорошими вопросами для вас... (около 1 минуты)
         </Text>
       )}
       {!generating && showRetry && (
         <Text className="mt-3 text-sm gray-6 text-center">
-          We couldn't think of questions right now.
+          Сейчас мы не смогли придумать никаких вопросов.
           <br />
-          Let's try again later.
+          Попробуем еще раз позже.
         </Text>
       )}
     </Wrapper>

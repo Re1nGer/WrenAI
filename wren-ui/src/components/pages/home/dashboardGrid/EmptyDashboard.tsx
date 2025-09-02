@@ -46,9 +46,9 @@ const EmptyDashboard = (props: {
       >
         <Logo size={48} color="var(--gray-8)" />
         <div className="text-lg text-medium text-center gray-8 mt-3">
-          No charts have been added yet
+          Пока графики не были добавлены
         </div>
-        <div className="gray-7">
+{/*         <div className="gray-7">
           Follow these steps to pin charts to your dashboard.{' '}
           <Link
             className="gray-8 underline"
@@ -58,20 +58,20 @@ const EmptyDashboard = (props: {
           >
             Learn more
           </Link>
-        </div>
+        </div> */}
         <Row className="mt-4" gutter={[16, 16]}>
           <StepIterator
             data={[
               {
-                title: '1. Create a thread',
+                title: '1. Создать тред',
                 image: '/images/dashboard/s1.jpg',
               },
               {
-                title: '2. Generate a chart',
+                title: '2. Сгенерировать график',
                 image: '/images/dashboard/s2.jpg',
               },
               {
-                title: '3. Pin to dashboard',
+                title: '3. Закрепить в дашборде',
                 image: '/images/dashboard/s3.jpg',
               },
             ]}

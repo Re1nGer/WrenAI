@@ -52,7 +52,7 @@ export default function HeaderBar() {
                 $isHighlight={pathname.startsWith(Path.Home)}
                 onClick={() => router.push(Path.Home)}
               >
-                Home
+                Домой
               </StyledButton>
 {/*               <StyledButton
                 shape="round"

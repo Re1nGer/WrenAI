@@ -90,9 +90,9 @@ export default function Sidebar(props: Props) {
       <div className="border-t border-gray-4 pt-2">
         <StyledButton type="text" block onClick={onSettingsClick}>
           <SettingOutlined className="text-md" />
-          Settings
+          Настройки
         </StyledButton>
-        <StyledButton type="text" block>
+{/*         <StyledButton type="text" block>
           <Link
             className="d-flex align-center"
             href="https://discord.com/invite/5DvshJqG8Z"
@@ -103,8 +103,8 @@ export default function Sidebar(props: Props) {
           >
             <DiscordIcon className="mr-2" style={{ width: 16 }} /> Discord
           </Link>
-        </StyledButton>
-        <StyledButton type="text" block>
+        </StyledButton> */}
+{/*         <StyledButton type="text" block>
           <Link
             className="d-flex align-center"
             href="https://github.com/Canner/WrenAI"
@@ -115,7 +115,7 @@ export default function Sidebar(props: Props) {
           >
             <GithubIcon className="mr-2" style={{ width: 16 }} /> GitHub
           </Link>
-        </StyledButton>
+        </StyledButton> */}
       </div>
     </Layout>
   );

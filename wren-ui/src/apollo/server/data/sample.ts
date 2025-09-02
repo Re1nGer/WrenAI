@@ -381,18 +381,18 @@ export const sampleDatasets: Record<string, SampleDataset> = {
     ],
     questions: [
       {
-        question: 'What is the average salary for each position?',
-        label: 'Aggregation',
+        question: 'Какова средняя заработная плата для каждой должности?',
+        label: 'Агрегация',
       },
       {
         question:
-          'Compare the average salary of male and female employees in each department.',
-        label: 'Comparison',
+          'Сравните среднюю заработную плату мужчин и женщин в каждом отделе.',
+        label: 'Сравнение',
       },
       {
         question:
-          'What are the names of the managers and the departments they manage?',
-        label: 'Associating',
+          'Как зовут менеджеров и какие отделы они возглавляют?',
+        label: 'Ассоциирование',
       },
     ],
   },

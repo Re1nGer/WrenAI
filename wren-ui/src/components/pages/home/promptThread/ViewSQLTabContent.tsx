@@ -92,12 +92,12 @@ export default function ViewSQLTabContent(props: AnswerResultProps) {
     if (!nativeSQLResult.nativeSQLMode) {
       message.success(
         <>
-          You copied Wren SQL. This dialect is for the Wren Engine and may not
-          run directly on your database.
+          Вы скопировали ИИ SQL. Этот диалект предназначен для ИИ и может не
+          работать напрямую с вашей базой данных.
           {hasNativeSQL && (
             <>
               {' '}
-              Click “<b>Show original SQL</b>” to get the executable version.
+              Нажмите «<b>Показать исходный SQL</b>», чтобы получить исполняемую версию.
             </>
           )}
         </>,
@@ -112,17 +112,17 @@ export default function ViewSQLTabContent(props: AnswerResultProps) {
         className="mb-3 adm-alert-info"
         message={
           <>
-            You’re viewing Wren SQL by default. If you want to run this query on
-            your own database, click “Show original SQL” to get the exact
-            syntax.
-            <Typography.Link
+            Если вы хотите запустить этот запрос в
+            своей базе данных, нажмите «Показать исходный SQL», чтобы получить точный
+            синтаксис.
+{/*             <Typography.Link
               className="underline ml-1"
               href="https://docs.getwren.ai/oss/guide/home/wren_sql"
               target="_blank"
               rel="noopener noreferrer"
             >
               Learn more about Wren SQL
-            </Typography.Link>
+            </Typography.Link> */}
           </>
         }
         type="info"
@@ -145,8 +145,8 @@ export default function ViewSQLTabContent(props: AnswerResultProps) {
               </>
             ) : (
               <span className="d-flex align-center gx-2">
-                <Logo size={18} />
-                <Text className="gray-8 text-medium text-sm">Wren SQL</Text>
+{/*                 <Logo size={18} />
+                <Text className="gray-8 text-medium text-sm">Wren SQL</Text> */}
               </span>
             )}
           </div>
@@ -179,7 +179,7 @@ export default function ViewSQLTabContent(props: AnswerResultProps) {
               size="small"
               onClick={() => onOpenAdjustSQLModal({ sql, responseId: id })}
             >
-              Adjust SQL
+              Править SQL
             </Button>
           </Space>
         </StyledToolBar>
@@ -208,7 +208,7 @@ export default function ViewSQLTabContent(props: AnswerResultProps) {
           data-ph-capture="true"
           data-ph-capture-attribute-name="view_sql_preview_data"
         >
-          View results
+          Посмотреть результаты
         </Button>
         {previewDataResult?.data?.previewData && (
           <div className="mt-2 mb-3">

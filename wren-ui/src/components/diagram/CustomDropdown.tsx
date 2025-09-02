@@ -66,7 +66,7 @@ export const ModelDropdown = makeDropdown((props: Props) => {
       label: (
         <>
           <EditOutlined className="mr-2" />
-          Update Columns
+          Обновить колонки
         </>
       ),
       key: MORE_ACTION.UPDATE_COLUMNS,
@@ -115,7 +115,7 @@ export const ColumnDropdown = makeDropdown((props: Props) => {
       label: (
         <>
           <EditOutlined className="mr-2" />
-          Edit
+          Изменить
         </>
       ),
       key: MORE_ACTION.EDIT,
@@ -141,7 +141,7 @@ export const DashboardDropdown = makeDropdown((props: Props) => {
       label: (
         <>
           <DatabaseOutlined className="mr-2" />
-          Cache settings
+          Настройки кэша
         </>
       ),
       key: MORE_ACTION.CACHE_SETTINGS,
@@ -168,12 +168,12 @@ export const DashboardItemDropdown = makeDropdown((props: Props) => {
       label: isHideLegend ? (
         <>
           <EyeOutlined className="mr-2" />
-          Show categories
+          Показать категории
         </>
       ) : (
         <>
           {<EyeInvisibleOutlined className="mr-2" />}
-          Hide categories
+          Прятать категории
         </>
       ),
       key: MORE_ACTION.HIDE_CATEGORY,
@@ -274,7 +274,7 @@ export const InstructionDropdown = makeDropdown(
         label: (
           <>
             <EyeOutlined className="mr-2" />
-            View
+            Смотреть
           </>
         ),
         key: MORE_ACTION.VIEW_INSTRUCTION,
@@ -288,7 +288,7 @@ export const InstructionDropdown = makeDropdown(
         label: (
           <>
             <EditOutlined className="mr-2" />
-            Edit
+            Изменить
           </>
         ),
         key: MORE_ACTION.EDIT,
@@ -341,7 +341,7 @@ export const AdjustAnswerDropdown = makeDropdown(
           }),
       },
       {
-        label: 'Adjust SQL',
+        label: 'Править SQL',
         icon: <CodeFilled className="text-base" />,
         disabled: !data.sql,
         key: 'adjust-sql',

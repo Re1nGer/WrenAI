@@ -39,13 +39,12 @@ const Toolbar = (props: { dataSource: string; onClick: () => void }) => {
   const name = getDataSourceName(dataSource);
   return (
     <div className="d-flex justify-space-between align-center px-1">
-      <span className="d-flex align-center gx-2">
+{/*       <span className="d-flex align-center gx-2">
         <Logo size={16} />
-        Wren SQL
-      </span>
+      </span> */}
       <Button className="px-0" type="link" size="small" onClick={onClick}>
         <SelectOutlined />
-        Import from {name} SQL
+        Импортировать из {name} SQL
       </Button>
     </div>
   );
@@ -247,9 +246,9 @@ export default function QuestionSQLPairModal(props: Props) {
                 className="d-flex justify-space-between"
                 style={{ width: '100%' }}
               >
-                <span>Question</span>
+                <span>Вопрос</span>
                 <div className="gray-8 text-sm">
-                  Let AI create a matching question for this SQL statement.
+                  Пусть ИИ создаст соответствующий вопрос для этого SQL-запроса.
                   <Button
                     className="ml-2"
                     size="small"
@@ -257,7 +256,7 @@ export default function QuestionSQLPairModal(props: Props) {
                     onClick={onGenerateQuestion}
                     disabled={disabled}
                   >
-                    <span className="text-sm">Generate question</span>
+                    <span className="text-sm">Сгенерировать вопрос</span>
                   </Button>
                 </div>
               </div>
@@ -305,14 +304,14 @@ export default function QuestionSQLPairModal(props: Props) {
         </StyledForm>
         <div className="my-3">
           <Typography.Text className="d-block gray-7 mb-2">
-            Data preview (50 rows)
+            Предварительный просмотр данных (50 строк)
           </Typography.Text>
           <Button
             onClick={onPreviewData}
             loading={previewing}
             disabled={disabled}
           >
-            Preview data
+            Предварительный просмотр данных
           </Button>
           {showPreview && (
             <div className="my-3">

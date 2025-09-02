@@ -41,8 +41,7 @@ const adjustmentType = {
 
 const knowledgeTooltip = (
   <>
-    Store this answer as a Question-SQL pair to help Wren AI improve SQL
-    generation.
+    Сохраните этот ответ в виде пары «вопрос-SQL», чтобы помочь моделе улучшить генерацию SQL генерацию.
     <br />
     <Typography.Link
       className="gray-1 underline"
@@ -50,7 +49,7 @@ const knowledgeTooltip = (
       target="_blank"
       rel="noopener noreferrer"
     >
-      Learn more
+      Узнать больше
     </Typography.Link>
   </>
 );
@@ -164,7 +163,7 @@ const AdjustmentInformation = (props: {
       <div className="d-flex align-center gx-2">
         <ShareAltOutlined className="gray-7" />
         <div className="flex-grow-1 gray-7">
-          Adjusted answer
+          Исправленный ответ
           <Tag className="gray-6 border border-gray-5 bg-gray-3 ml-3 text-medium">
             {adjustmentType[adjustment.type]}
           </Tag>
@@ -289,7 +288,7 @@ export default function AnswerResult(props: Props) {
                 tab={
                   <div className="select-none">
                     <CheckCircleFilled className="mr-2" />
-                    <Text>Answer</Text>
+                    <Text>Ответ</Text>
                   </div>
                 }
               >
@@ -301,7 +300,7 @@ export default function AnswerResult(props: Props) {
               tab={
                 <div className="select-none">
                   <CodeFilled className="mr-2" />
-                  <Text>View SQL</Text>
+                  <Text>Посмотреть SQL</Text>
                 </div>
               }
             >
@@ -313,7 +312,7 @@ export default function AnswerResult(props: Props) {
                 <div className="select-none">
                   <PieChartFilled className="mr-2" />
                   <Text>
-                    Chart<Tag className="adm-beta-tag">Beta</Tag>
+                    Графики<Tag className="adm-beta-tag">в Бета</Tag>
                   </Text>
                 </div>
               }
@@ -346,7 +345,7 @@ export default function AnswerResult(props: Props) {
               >
                 <div className="d-flex align-center">
                   <RobotSVG className="mr-2" />
-                  Save to knowledge
+                  Сохранить в базу знаний
                 </div>
               </Button>
             </Tooltip>

@@ -93,7 +93,7 @@ export default function Preparation(props: Props) {
                   height={24}
                   className="mr-1"
                 />
-                Answer preparation steps
+                Этапы подготовки ответа
               </Typography.Title>
               <PreparationStatus {...props} preparedTask={preparedTask} />
             </div>

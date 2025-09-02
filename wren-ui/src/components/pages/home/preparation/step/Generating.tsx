@@ -13,7 +13,7 @@ export default function Generating(props: Props) {
   return (
     <>
       <Typography.Text className="gray-8">
-        Generating SQL statement
+        Генерация SQL-запроса
       </Typography.Text>
       <div className="gray-7 text-sm mt-1">
         {generating || correcting ? (
@@ -23,10 +23,10 @@ export default function Generating(props: Props) {
           </div>
         ) : (
           <>
-            <div>Successfully generated SQL statement</div>
+            <div>SQL запрос успешно сгенерирован</div>
             {loading && (
               <div className="d-flex align-center gx-2 mt-1">
-                Wrapping up <Spinner className="gray-6" size={16} />
+                Завершение <Spinner className="gray-6" size={16} />
               </div>
             )}
           </>

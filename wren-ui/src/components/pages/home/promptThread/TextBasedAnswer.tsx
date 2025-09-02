@@ -173,7 +173,7 @@ export default function TextBasedAnswer(props: AnswerResultProps) {
         icon={<EditOutlined />}
         onClick={(event) => event.stopPropagation()}
       >
-        Adjust the answer
+        Править ответ
         <CaretDownOutlined
           className="ml-1"
           rotate={adjustResultsDropdown.visible ? 180 : 0}
@@ -219,7 +219,7 @@ export default function TextBasedAnswer(props: AnswerResultProps) {
               title="Regenerate answer"
               onClick={onRegenerateAnswer}
             >
-              Regenerate
+              Сгенерировать заново
             </Button>
           </div>
         )}
@@ -240,14 +240,14 @@ export default function TextBasedAnswer(props: AnswerResultProps) {
               data-ph-capture="true"
               data-ph-capture-attribute-name="cta_text-answer_preview_data"
             >
-              View results
+              Посмотреть результаты
             </Button>
 
             <div className="mt-2 mb-3" data-guideid="text-answer-preview-data">
               {hasPreviewData && (
                 <Text type="secondary" className="text-sm">
-                  Considering the limit of the context window, we retrieve up to
-                  500 rows of results to generate the answer.
+                  Учитывая ограничение контекстного окна, мы извлекаем до
+                  500 строк результатов для генерации ответа.
                 </Text>
               )}
               <PreviewData
@@ -263,8 +263,8 @@ export default function TextBasedAnswer(props: AnswerResultProps) {
               <Alert
                 message={
                   <>
-                    Click <b>View SQL</b> to review the step-by-step query logic
-                    and verify why the data is unavailable.
+                    Нажмите <b>Просмотреть SQL</b>, чтобы просмотреть пошаговую логику запроса
+                    и проверить, почему данные недоступны.
                   </>
                 }
                 type="info"

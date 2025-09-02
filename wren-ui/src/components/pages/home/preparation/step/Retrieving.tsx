@@ -20,13 +20,13 @@ export default function Retrieving(props: Props) {
   const data = tables.map((table) => ({ name: table }));
 
   const title = isAdjustment
-    ? 'User-selected models applied'
-    : 'Retrieving top 10 model candidates';
+    ? 'Применены модели определенные пользователем'
+    : 'Получение 10 лучших кандидатов в модели';
 
   const modelDescription = isAdjustment ? (
-    <>{tables.length} models applied</>
+    <>{tables.length} модели применены</>
   ) : (
-    <>Top {tables.length} model candidates identified</>
+    <>Топ {tables.length} определены кандидаты в модели</>
   );
 
   return (
@@ -35,7 +35,7 @@ export default function Retrieving(props: Props) {
       <div className="gray-7 text-sm mt-1">
         {loading ? (
           <div className="d-flex align-center gx-2">
-            Searching
+            Поиск
             <Spinner className="gray-6" size={12} />
           </div>
         ) : (
