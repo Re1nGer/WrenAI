@@ -226,7 +226,7 @@ export default function ViewSQLTabContent(props: AnswerResultProps) {
               }}
             />
             <div className="text-right">
-              <Text className="text-base gray-6">Showing up to 500 rows</Text>
+              <Text className="text-base gray-6">Показано до 500 строк</Text>
             </div>
           </div>
         )}

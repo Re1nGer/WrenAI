@@ -93,7 +93,7 @@ const makeProcessing = (text: string) => (props: Props) => {
           disabled={loading}
         >
           <StopOutlined className="-mr-1" />
-          Stop
+          Остановить
         </Button>
       </div>
     </Wrapper>
@@ -152,7 +152,7 @@ const Failed = makeProcessingError({
   icon: <ErrorIcon />,
 });
 
-const Understanding = makeProcessing('Understanding question');
+const Understanding = makeProcessing('Восприятие вопроса');
 
 const IntentionFinished = (props: Props) => {
   const { data, onIntentSQLAnswer } = props;
