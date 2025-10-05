@@ -40,15 +40,10 @@ interface Attributes {
 }
 
 const PromptStyle = styled.div`
-  position: fixed;
   width: 680px;
-  left: 50%;
-  margin-left: calc(-340px + 133px);
+  flex: 1 0 50%;
   bottom: 18px;
   z-index: 999;
-  box-shadow:
-    rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 `;
 
 export default forwardRef<Attributes, Props>(function Prompt(props, ref) {

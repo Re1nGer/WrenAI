@@ -14,6 +14,10 @@ const basicStyle = css`
 
 const StyledContentLayout = styled(Layout)<{ color?: string }>`
   position: relative;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
   ${basicStyle}
   ${(props) => props.color && `background-color: var(--${props.color});`}
 `;

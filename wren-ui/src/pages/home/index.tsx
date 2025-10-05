@@ -132,12 +132,12 @@ export default function Home() {
 
   return (
     <SiderLayout loading={false} sidebar={homeSidebar}>
-      {isSampleDataset && (
-        <SampleQuestionsInstruction
-          sampleQuestions={sampleQuestions}
-          onSelect={onSelectQuestion}
-        />
-      )}
+      
+      <Prompt
+        ref={$prompt}
+        {...askPrompt}
+        onCreateResponse={onCreateResponse}
+      />
 
       {!isSampleDataset && (
         <RecommendedQuestionsInstruction
@@ -145,11 +145,13 @@ export default function Home() {
           loading={threadCreating}
         />
       )}
-      <Prompt
-        ref={$prompt}
-        {...askPrompt}
-        onCreateResponse={onCreateResponse}
-      />
+
+      {isSampleDataset && (
+        <SampleQuestionsInstruction
+          sampleQuestions={sampleQuestions}
+          onSelect={onSelectQuestion}
+        />
+      )}
     </SiderLayout>
   );
 }
