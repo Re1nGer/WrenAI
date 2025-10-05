@@ -142,6 +142,7 @@ export default function PromptInput(props: Props) {
          lineHeight: '24px',
          fontWeight: 600,
          alignItems: 'center',
+         justifyContent: 'center',
          marginBottom: '52px'
           }}>
         Узнайте больше о своих данных.
