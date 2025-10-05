@@ -18,7 +18,10 @@ const CategorySectionBlock = styled.div`
 `;
 
 const QuestionBlock = styled.div`
+  font-weight: 500;
+  color: #1C1D1E;
   background: var(--gray-1);
+  border-radius: 20;
   user-select: none;
   height: 150px;
   transition: border-color ease 0.2s;
@@ -63,8 +66,7 @@ const QuestionTemplate = ({
   return (
     <Col span={8}>
       <QuestionBlock
-        className={clsx(
-          'border border-gray-5 rounded px-3 pt-3 pb-4',
+        className={clsx('px-3 pt-3 pb-4 ',
           loading ? 'cursor-wait' : 'cursor-pointer',
           {
             'is-active': isSelected,
@@ -75,7 +77,6 @@ const QuestionTemplate = ({
       >
         <div className="d-flex justify-space-between align-center text-sm mb-3">
           <div
-            className="border border-gray-5 px-2 rounded-pill text-truncate"
             title={category}
           >
             {category}
@@ -115,13 +116,13 @@ export default function RecommendedQuestionsPrompt(props: Props) {
   return (
     <div className="bg-gray-2 px-10 py-6">
       <div className="d-flex align-center mb-3">
-        <Logo size={24} color="var(--gray-8)" />
-        <div className="text-md text-medium gray-8 mx-3">
-          Узнайте больше о своих данных.
-        </div>
-        <div className="text-medium gray-7">
-          Попробуйте задать некоторые из следующих вопросов
-        </div>
+        <div className="text-left mt-3"
+          style={{
+            fontSize: '20x',
+            lineHeight: '24px',
+            fontWeight: 600,
+            marginBottom: '20px'
+          }}>Попробуйте спросить...</div>
       </div>
       <Space
         style={{ width: 680 }}
