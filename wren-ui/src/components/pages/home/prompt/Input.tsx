@@ -17,6 +17,8 @@ const StyledTextArea = styled(Input.TextArea)`
   &.ant-input {
     padding: 16px 60px 16px 20px !important;
     font-size: 16px;
+    max-width: 800px;
+    width: 100%;
     line-height: 1.5;
     border: 1px solid #d9d9d9;
     border-radius: 16px;
@@ -133,26 +135,38 @@ export default function PromptInput(props: Props) {
   const isDisabled = innerLoading || isProcessing;
 
   return (
-    <InputContainer>
-      <StyledTextArea
-        ref={$promptInput}
-        data-gramm="false"
-        autoSize={{ minRows: 1, maxRows: 6 }}
-        value={inputValue}
-        onInput={syncInputValue}
-        onPressEnter={inputEnter}
-        disabled={isDisabled}
-        placeholder={inputProps?.placeholder || 'Задайте вопрос'}
-        {...inputProps}
-      />
-      <SendButton
-        onClick={handleAsk}
-        disabled={isDisabled || !inputValue.trim()}
-        type="button"
-        aria-label="Send question"
-      >
-        <SendOutlined />
-      </SendButton>
-    </InputContainer>
+    <div className='d-flex flex-column' style={{width: '100%'}}>
+      <div style={{
+         display: 'flex',
+         fontSize: '32px',
+         lineHeight: '24px',
+         fontWeight: 600,
+         alignItems: 'center',
+         marginBottom: '52px'
+          }}>
+        Узнайте больше о своих данных.
+      </div>
+      <InputContainer>
+        <StyledTextArea
+          ref={$promptInput}
+          data-gramm="false"
+          autoSize={{ minRows: 1, maxRows: 6 }}
+          value={inputValue}
+          onInput={syncInputValue}
+          onPressEnter={inputEnter}
+          disabled={isDisabled}
+          placeholder={inputProps?.placeholder || 'Задайте вопрос'}
+          {...inputProps}
+        />
+        <SendButton
+          onClick={handleAsk}
+          disabled={isDisabled || !inputValue.trim()}
+          type="button"
+          aria-label="Send question"
+        >
+          <SendOutlined />
+        </SendButton>
+      </InputContainer>
+    </div>
   );
 }

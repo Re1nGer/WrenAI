@@ -25,9 +25,6 @@ const Wrapper = ({ children }) => {
       className="d-flex align-center justify-center flex-column"
       style={{ height: '100%' }}
     >
-      <div className="text-md text-medium gray-8 mt-3">
-        Узнайте больше о своих данных.
-      </div>
       {children}
     </div>
   );

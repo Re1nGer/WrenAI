@@ -22,21 +22,8 @@ export interface RecommendedQuestionsProps {
 
 const StyledPromptThread = styled.div`
   width: 768px;
-  margin-left: auto;
-  margin-right: auto;
-
-  h4.ant-typography {
-    margin-top: 10px;
-  }
-
-  .ant-typography pre {
-    border: none;
-    border-radius: 4px;
-  }
-
-  button {
-    vertical-align: middle;
-  }
+  display: flex; 
+  height: 100%;
 `;
 
 const AnswerResultTemplate: React.FC<

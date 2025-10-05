@@ -207,18 +207,12 @@ export const StyledTreeNodeLink = styled(Link)`
   cursor: pointer;
   user-select: none;
   margin-top: 16px;
-  padding: 0 16px;
   line-height: 28px;
-  color: var(--gray-8);
   &:hover {
     background-color: var(--gray-4);
   }
   &:active {
     background-color: var(--gray-6);
-  }
-  &.adm-treeNode--selected {
-    background-color: var(--gray-4);
-    color: var(--geekblue-6);
   }
 `;
 

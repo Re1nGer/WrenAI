@@ -10,6 +10,7 @@ import SidebarTree, {
   useSidebarTreeState,
 } from './SidebarTree';
 import ThreadTree, { ThreadData } from './home/ThreadTree';
+import LogoIcon from '../LogoIcon';
 
 export interface Props {
   data: {
@@ -77,8 +78,8 @@ export default function Home(props: Props) {
         })}
         href={Path.HomeDashboard}
       >
-        <FundViewOutlined className="mr-2" />
-        <span className="text-medium">Дашборд</span>
+{/*         <FundViewOutlined className="mr-2" /> */}
+        <LogoIcon />
       </StyledTreeNodeLink>
       <ThreadTree
         threads={threads}

@@ -10,6 +10,8 @@ interface Props {
 }
 
 const Wrapper = styled.div<{ multipleLine?: number }>`
+  font-weight: 500;
+  color: #1C1D1E;
   overflow: hidden;
   text-overflow: ellipsis;
   ${(props) =>

@@ -21,11 +21,12 @@ const DemoTemplate = ({ label, question, onSelect }) => {
   return (
     <Col span={8}>
       <DemoBlock
-        className="border border-gray-5 rounded px-3 pt-3 pb-4 cursor-pointer"
+        className="border border-gray-5 px-3 pt-3 pb-4 cursor-pointer"
         onClick={() => onSelect({ label, question })}
+        style={{ background: '#F4F7F9', borderRadius: 20 }}
       >
         <div className="d-flex justify-space-between align-center text-sm mb-3">
-          <div className="border border-gray-5 px-2 rounded-pill">{label}</div>
+          <div>{label}</div>
         </div>
         <EllipsisWrapper multipleLine={4} text={question} />
       </DemoBlock>
@@ -38,8 +39,14 @@ const DemoColumnIterator = makeIterable(DemoTemplate);
 export default function DemoPrompt(props: Props) {
   const { demo, onSelect } = props;
   return (
-    <div className="gray-8" style={{ width: 580 }}>
-      <div className="text-center mt-3 mb-2">Попробуйте спросить...</div>
+    <div style={{ width: 580 }}>
+      <div className="text-left mt-3"
+       style={{
+         fontSize: '20x',
+         lineHeight: '24px',
+         fontWeight: 600,
+         marginBottom: '20px'
+      }}>Попробуйте спросить...</div>
       <Row gutter={16}>
         <DemoColumnIterator data={demo} onSelect={onSelect} />
       </Row>
