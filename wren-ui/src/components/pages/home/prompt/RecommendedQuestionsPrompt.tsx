@@ -20,8 +20,9 @@ const CategorySectionBlock = styled.div`
 const QuestionBlock = styled.div`
   font-weight: 500;
   color: #1C1D1E;
-  background: var(--gray-1);
-  border-radius: 20;
+  background: #F4F7F9;
+  border: 1px solid gray;
+  border-radius: 20px;
   user-select: none;
   height: 150px;
   transition: border-color ease 0.2s;
